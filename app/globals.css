@@ -1,26 +1,85 @@
 @import "tailwindcss";
 
+/* Editorial design system — single source of truth */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Core palette — aligned with Figma */
+  --background: #faf9f7;
+  --foreground: #1a1a1f;
+  --text-secondary: #6b6b75;
+  --text-tertiary: #6b6b75;
+  --text-muted: #6b6b75;
+  --text-reversed: #F6F4F1;
+
+  /* Surfaces */
+  --surface-soft: rgba(244, 244, 242, 0.5);
+  --surface-warm: #F6F4F1;
+  --surface-warmer: #f0ebe5;
+  --surface-neutral: #EBEAE7;
+  --surface-card: #FCFCFC;
+
+  /* Accent — editorial muted blue (Figma #516274) */
+  --accent: #516274;
+  --accent-hover: #435363;
+
+  /* Borders & dividers */
+  --divider: rgba(0, 0, 0, 0.08);
+  --border-subtle: rgba(0, 0, 0, 0.08);
+
+  /* Section label (eyebrow) */
+  --section-label: #6b6b75;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* Design uses light theme; dark mode disabled for Figma fidelity */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+/* Section label — editorial, mono feel */
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+  color: var(--section-label);
+}
+
+.section-label::before {
+  content: "";
+  width: 3px;
+  height: 1em;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* Link with arrow — hover movement */
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.link-arrow:hover {
+  gap: 0.75rem;
+}
+
+.link-arrow .arrow {
+  transition: transform 0.2s ease;
+}
+
+.link-arrow:hover .arrow {
+  transform: translateX(2px);
 }

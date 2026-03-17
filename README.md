@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jaison Portfolio
 
-## Getting Started
+A personal portfolio website built with Next.js, TypeScript, and Tailwind CSS. Configured for static export to deploy on DigitalOcean App Platform.
 
-First, run the development server:
+## Project Structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+/app
+  /                  - Homepage (main scrolling narrative)
+  /case              - Case study index
+  /case/[slug]       - Individual case study pages
+  /proof             - Proof landing (links to detail pages)
+  /proof/[slug]      - Proof detail pages (design-systems, design-operations)
+  /contact           - Contact page
+/lib
+  site.ts            - All site copy and content configuration
+/components
+  Navigation.tsx     - Site navigation (Work, Proof, Contact)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Static Site Generation**: Configured for static export (`output: 'export'`)
+- **TypeScript**: Full type safety throughout
+- **Tailwind CSS**: Utility-first styling
+- **Password Protection**: Case studies can be password protected (client-side)
+- **Dynamic Routes**: Case studies use dynamic routing with static generation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Development
 
-## Learn More
+```bash
+# Install dependencies
+npm install
 
-To learn more about Next.js, take a look at the following resources:
+# Run development server
+npm run dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Build for production (static export)
+npm run build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# The static files will be in the /out directory
+```
 
-## Deploy on Vercel
+## Adding Case Studies
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Edit `/lib/site.ts` to add new case studies:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```typescript
+export const caseStudies: CaseStudy[] = [
+  {
+    slug: "my-case-study",
+    title: "My Case Study",
+    description: "Description here",
+    passwordProtected: false,
+  },
+  {
+    slug: "private-case",
+    title: "Private Case Study",
+    description: "Description here",
+    passwordProtected: true,
+    password: "your-password-here",
+  },
+];
+```
+
+## Deployment
+
+This site is configured for static export. After running `npm run build`, the static files will be in the `/out` directory, ready to deploy to DigitalOcean App Platform or any static hosting service.
+
+## Notes
+
+- Password protection is client-side only (using sessionStorage)
+- All site content is managed in `/lib/site.ts`
+- Placeholder content is currently in place - ready for design implementation
