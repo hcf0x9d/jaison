@@ -14,6 +14,9 @@ export const site = {
     { label: "Contact", href: "/contact" },
   ],
 
+  /** Paths that use dark nav variant (light text/logo). Default is light for all other pages. */
+  navigationDarkPaths: ["/"],
+
   social: {
     linkedin: "https://www.linkedin.com/in/jason-fukura",
     medium: "https://medium.com/@jasonfukura",
@@ -93,9 +96,10 @@ export const site = {
       {
         title: "Kyōfolio",
         description:
-          "A minimal portfolio builder for designers who value clarity over flash. Built with the belief that your work should speak louder than the container it's in.",
-        href: "#",
+          "An adaptive daily planning system that helps you organize tasks, routines, and priorities around changing energy—without turning productivity into punishment.",
+        href: "https://www.kyofolio.com",
         status: "Side project",
+        image: "/images/ipad-today.png",
       },
     ],
 
@@ -144,7 +148,7 @@ export const site = {
       title: "Ambrosia Design System",
       href: "/case/ambrosia-design-system",
       externalUrl: "https://foodsmartops.hcf0x9d.com/",
-      image: "/images/case-studies/ambrosia-design-system.png",
+      image: "/images/design-system.webp",
       summary:
         "A scalable multi-surface design system built from zero across product complexity.",
       shortSummary:
@@ -192,19 +196,19 @@ export const site = {
       ],
       visuals: [
         {
-          image: "/images/case-studies/ambrosia-design-system.png",
+          image: "/images/design-system.webp",
           title: "Component Library",
           description:
             "Core component library showing foundational primitives and composition patterns",
         },
         {
-          image: "/images/case-studies/ambrosia-design-system.png",
+          image: "/images/system-colors.webp",
           title: "Token Documentation",
           description:
             "Design token architecture with semantic naming and platform-specific implementations",
         },
         {
-          image: "/images/case-studies/ambrosia-design-system.png",
+          image: "/images/components.webp",
           title: "System Architecture",
           description:
             "Multi-platform architecture showing token distribution and component inheritance",
@@ -244,7 +248,7 @@ export const site = {
       title: "Designing Trust in a Silent, High-Stakes Security System",
       href: "/case/designing-trust-security-system",
       externalUrl: "https://cisecurity.hcf0x9d.com/",
-      image: "/images/case-studies/mdr-dashboard.jpg",
+      image: "/images/cisecurity-prototype.avif",
       summary:
         "A high-stakes dashboard experience for quiet, confident security monitoring.",
       shortSummary:
@@ -283,13 +287,19 @@ export const site = {
       ],
       visuals: [
         {
-          image: "/images/case-studies/mdr-dashboard.jpg",
+          image: "/images/cisecurity-wires.avif",
+          title: "Initial wireframes",
+          description:
+            "Getting an understanding of what the data might look like",
+        },
+        {
+          image: "/images/cisecurity-iteration2.avif",
           title: "Refined hierarchy",
           description:
             "System health view with reduced alert density and trend-based emphasis",
         },
         {
-          image: "/images/case-studies/mdr-dashboard.jpg",
+          image: "/images/cisecurity-prototype.avif",
           title: "D3 prototype",
           description:
             "Functional prototype built with real-world collector data for validation",
@@ -314,37 +324,37 @@ export const site = {
         "Trust is built through understandable structure and predictable signals.",
       ],
     },
-    {
-      slug: "making-retirement-human",
-      title: "Making Retirement Human",
-      href: "/case/making-retirement-human",
-      externalUrl: "https://retirementcalc.hcf0x9d.com/",
-      image: "/images/case-studies/retirement-human.png",
-      summary:
-        "A plain-language retirement planning experience that reframed a complex financial tool into something more conversational, understandable, and emotionally approachable.",
-      shortSummary:
-        "A retirement calculator designed to feel less like a spreadsheet and more like a conversation.",
-      tags: ["Finance", "UX Writing", "Consumer UX", "Workflow UX"],
-      featured: false,
-      role: "Product Designer",
-      context:
-        "Retirement planning tools often feel abstract, intimidating, and overly technical for everyday users.",
-      problem:
-        "The experience needed to make complex planning feel understandable and useful without oversimplifying the underlying model.",
-      outcomes: [
-        "Made a complex planning flow feel more approachable",
-        "Improved comprehension through plain language and progressive structure",
-      ],
-      lessons: [
-        "Sometimes the real UX challenge is emotional, not just structural.",
-      ],
-    },
+    // {
+    //   slug: "making-retirement-human",
+    //   title: "Making Retirement Human",
+    //   href: "/case/making-retirement-human",
+    //   externalUrl: "https://retirementcalc.hcf0x9d.com/",
+    //   image: "/images/retirement-calc.webp",
+    //   summary:
+    //     "A plain-language retirement planning experience that reframed a complex financial tool into something more conversational, understandable, and emotionally approachable.",
+    //   shortSummary:
+    //     "A retirement calculator designed to feel less like a spreadsheet and more like a conversation.",
+    //   tags: ["Finance", "UX Writing", "Consumer UX", "Workflow UX"],
+    //   featured: false,
+    //   role: "Product Designer",
+    //   context:
+    //     "Retirement planning tools often feel abstract, intimidating, and overly technical for everyday users.",
+    //   problem:
+    //     "The experience needed to make complex planning feel understandable and useful without oversimplifying the underlying model.",
+    //   outcomes: [
+    //     "Made a complex planning flow feel more approachable",
+    //     "Improved comprehension through plain language and progressive structure",
+    //   ],
+    //   lessons: [
+    //     "Sometimes the real UX challenge is emotional, not just structural.",
+    //   ],
+    // },
     {
       slug: "connecting-platforms",
       title: "Connecting Platforms",
       href: "/case/connecting-platforms",
       externalUrl: "https://integrations.hcf0x9d.com/",
-      image: "/images/case-studies/integrations.png",
+      image: "/images/3rd-party-integrations.webp",
       summary:
         "Designing a faster, more intuitive way to map complex 3rd-party integrations. The Integration Platform was created to help users more efficiently manage third-party integrations within Medable's platform.",
       shortSummary:
@@ -393,25 +403,19 @@ export const site = {
       ],
       visuals: [
         {
-          image: "/images/case-studies/integrations.png",
-          title: "Integration platform interface",
-          description:
-            "Main integration management interface",
-        },
-        {
-          image: "/images/case-studies/integrations.png",
+          image: "/images/medable-integrations-initial.webp",
           title: "Initial concept",
           description:
             "First concept with unified trigger configuration pattern — before usability learnings",
         },
         {
-          image: "/images/case-studies/integrations.png",
+          image: "/images/medable-integrations-iteration.webp",
           title: "Revisited design",
           description:
             "Second iteration with wizard workflow, clear section labels, and primary action buttons",
         },
         {
-          image: "/images/case-studies/integrations.png",
+          image: "/images/medable-integrations-overlay.webp",
           title: "Add trigger modal",
           description:
             "Example of adding a trigger to an action during configuration",
@@ -446,7 +450,7 @@ export const site = {
       title: "Food Benefit Ledger",
       href: "/case/food-benefit-ledger",
       externalUrl: "https://foodbenefits.hcf0x9d.com/",
-      image: "/images/case-studies/food-benefits.png",
+      image: "/images/food-benefits.webp",
       summary:
         "A benefit redemption ledger built for support, visibility, and trust.",
       shortSummary:
@@ -484,14 +488,14 @@ export const site = {
         },
       ],
       visuals: [
+        // {
+        //   image: "/images/foodbenefits-ledger.avif",
+        //   title: "Status hierarchy",
+        //   description:
+        //     "Ledger with status badges, filtering, and expiration visibility",
+        // },
         {
-          image: "/images/case-studies/food-benefits.png",
-          title: "Status hierarchy",
-          description:
-            "Ledger with status badges, filtering, and expiration visibility",
-        },
-        {
-          image: "/images/case-studies/food-benefits.png",
+          image: "/images/foodbenefits-workspace.webp",
           title: "Production ledger",
           description:
             "Complete history with progressive disclosure and contextual warnings",
@@ -508,140 +512,337 @@ export const site = {
           description:
             "Expiration visibility enabled proactive outreach for expiring codes. Stronger RD confidence in answering member questions.",
         },
+        {
+          title: "RD satisfaction",
+          description:
+            "Users rarely reach out unless something is broken — so when we received unsolicited messages of appreciation, we knew we'd hit the mark."
+        }
       ],
       whatMatteredMost:
-        "Transparency was not only a usability improvement—it became a trust-building tool between dietitians and members. Lean iterative shipping mattered more than waiting for a perfect solution.",
+        "This project reinforced a core belief: transparency isn't just a design principle—it's a trust-building tool. By giving RDs visibility into member benefits, we didn't just solve a usability problem. We gave them the information they needed to be better advocates for their members.\n" +
+        "\n" +
+        "The work also demonstrated the value of lean, iterative design in B2B healthcare. Instead of waiting months for a perfect solution, we shipped MVPs, gathered feedback, and evolved the experience based on real-world needs.",
       lessons: [
         "Operational tools deserve the same design rigor as user-facing consumer products.",
       ],
+      quote: {
+        text: "I had one member who reported the link to her FreshFund code wasn't working. I was able to see that a correction link had been added to her account with the new features. I didn't have to submit a support ticket for the link not working. This feature will be so helpful. Instead of me having to guess or guide them through multiple already-redeemed codes, I can tell them exactly which dates need to be redeemed. It will save me a lot of time when working with tech-challenged members!",
+        cite: "RD user"
+      }
     },
-    {
-      slug: "foodsmart-people-first-design-practice",
-      title: "Foodsmart: Building a People-First Design Practice",
-      href: "/case/foodsmart-people-first-design-practice",
-      externalUrl: "https://foodsmartops.hcf0x9d.com/",
-      image: "/images/case-studies/foodsmart-people-first-design-practice.png",
-      summary:
-        "How we transformed Foodsmart's design culture, systems, and tools to scale a world-class healthcare product experience.",
-      shortSummary:
-        "Transformed design culture, systems, and tools to scale a people-first healthcare product experience.",
-      tags: ["Brand Refresh", "Design Systems", "DesignOps", "B2B Healthcare"],
-      featured: true,
-      role: "Director of Design",
-      scope: "Brand, Design Systems, Design Process, DesignOps",
-      team: "Design, Product, Engineering",
-      timeframe: "2025",
-      context:
-        "When I joined Foodsmart, the existing style guide posed immediate challenges from a usability and accessibility standpoint. Our users—registered dietitians, health coaches, and members managing chronic conditions—needed clarity, reliability, and trust. The existing brand didn't fully support that mission. The work spanned brand refresh, design systems (Ambrosia DLS), dietitian tools from zero to launch, and DesignOps rituals to scale the team.",
-      challenge:
-        "The color palette was limited, typeface choices created legibility issues, and the overall design language prioritized brand expression over user needs.",
-      challengeQuote:
-        "Our users needed clarity, reliability, and trust. The existing brand didn't fully support that mission.",
-      challengeDetail:
-        "We evolved from playful brand-first to professional people-first design. This required an expanded color palette with semantic colors meeting WCAG AA, accessibility-first hierarchy with increased contrast, standardized typography for improved legibility, and a reframed design language that built trust with healthcare professionals and members.",
-      complexity: [
-        "Limited color palette and typeface choices creating legibility issues",
-        "Design language prioritizing brand expression over user needs",
-        "Multiple product surfaces (member-facing apps, clinical dashboards) requiring flexible systems",
-        "No existing documentation for dietitian workflows; zero-to-launch for new tools",
-      ],
-      approach: [
-        {
-          title: "Brand Refresh",
-          description:
-            "Expanded the color palette with semantic colors for success, warning, error, and informational states—all meeting WCAG AA. Shifted to accessibility-first hierarchy with increased contrast. Standardized typography for body copy and interface text. Refreshed Ovi mascot with a modular 'Ovi Factory' system for scalable, contextual expressions and poses.",
-        },
-        {
-          title: "Design Systems (Ambrosia DLS)",
-          description:
-            "Built a foundational library of tokens, components, and patterns for consistency across all Foodsmart products. Created Product Design Component Library for clinician and admin-facing workflows (data tables, charting, scheduling). Built Member Design Component Library optimized for responsive UI, multilingual content, and WCAG AA compliance.",
-        },
-        {
-          title: "Design Process",
-          description:
-            "From zero to launch for dietitian tools: discovery and definition via interviews and competitor audits, centralized Confluence for research and personas, lightweight user testing protocols (FigJam templates, RD manager partnerships), and a single-pane-of-glass dietitian dashboard consolidating scheduling, member management, documentation, and communication.",
-        },
-        {
-          title: "DesignOps Blitz",
-          description:
-            "Defined team culture with onboarding deck, central Confluence structure, and clear roles and skill expectations. Fostered curiosity through monthly Lunch & Learn sessions (Lean UX, rapid user testing, AI-assisted design). Built collaboration rituals: weekly critique templates, async design retros, Figma/Confluence playbooks. Created File Setup Wizard Figma plugin for consistent project structure.",
-        },
-      ],
-      visuals: [
-        {
-          image: "/images/case-studies/foodsmart-people-first-design-practice.png",
-          title: "Color System Reference",
-          description:
-            "New semantic color system with accessibility-first approach",
-        },
-        {
-          image: "/images/case-studies/foodsmart-people-first-design-practice.png",
-          title: "Ovi mascot system",
-          description:
-            "Ovi mascot system with modular expressions and poses. Ovi Factory demonstration: https://www.youtube.com/embed/cgSsckMPsaU",
-        },
-        {
-          image: "/images/case-studies/foodsmart-people-first-design-practice.png",
-          title: "Ambrosia DLS architecture",
-          description:
-            "Design system showing tokens, components, and patterns",
-        },
-        {
-          image: "/images/case-studies/foodsmart-people-first-design-practice.png",
-          title: "Dietitian dashboard",
-          description:
-            "Single pane of glass consolidating scheduling, member management, and documentation",
-        },
-      ],
-      outcomes: [
-        {
-          title: "+43 NPS Point Increase",
-          description:
-            "Measured over 6 months post-launch.",
-        },
-        {
-          title: "Workflows > UI Refresh",
-          description:
-            "Solved actual pain points, not just aesthetics.",
-        },
-        {
-          title: "Trust Reduced Friction",
-          description:
-            "Improved confidence and efficiency in care delivery.",
-        },
-      ],
-      whatMatteredMost:
-        "The hardest part wasn't the design work—it was the organizational change. Getting teams to trust a shared system required patience, clear communication, and a willingness to iterate based on real feedback. What mattered most was treating the system as a service, not a mandate. We built trust by solving real problems—workflows, accessibility, and clarity—not by imposing process.",
-      lessons: [
-        "Consistency is an operational advantage, not just an aesthetic one.",
-        "A design system only works when documentation, implementation, and collaboration all evolve together.",
-        "Operational tools deserve the same design rigor as user-facing consumer products.",
-      ],
-    },
+    // {
+    //   slug: "foodsmart-people-first-design-practice",
+    //   title: "Foodsmart: Building a People-First Design Practice",
+    //   href: "/case/foodsmart-people-first-design-practice",
+    //   externalUrl: "https://foodsmartops.hcf0x9d.com/",
+    //   image: "/images/case-studies/foodsmart-people-first-design-practice.png",
+    //   summary:
+    //     "How we transformed Foodsmart's design culture, systems, and tools to scale a world-class healthcare product experience.",
+    //   shortSummary:
+    //     "Transformed design culture, systems, and tools to scale a people-first healthcare product experience.",
+    //   tags: ["Brand Refresh", "Design Systems", "DesignOps", "B2B Healthcare"],
+    //   featured: true,
+    //   role: "Director of Design",
+    //   scope: "Brand, Design Systems, Design Process, DesignOps",
+    //   team: "Design, Product, Engineering",
+    //   timeframe: "2025",
+    //   context:
+    //     "When I joined Foodsmart, the existing style guide posed immediate challenges from a usability and accessibility standpoint. Our users—registered dietitians, health coaches, and members managing chronic conditions—needed clarity, reliability, and trust. The existing brand didn't fully support that mission. The work spanned brand refresh, design systems (Ambrosia DLS), dietitian tools from zero to launch, and DesignOps rituals to scale the team.",
+    //   challenge:
+    //     "The color palette was limited, typeface choices created legibility issues, and the overall design language prioritized brand expression over user needs.",
+    //   challengeQuote:
+    //     "Our users needed clarity, reliability, and trust. The existing brand didn't fully support that mission.",
+    //   challengeDetail:
+    //     "We evolved from playful brand-first to professional people-first design. This required an expanded color palette with semantic colors meeting WCAG AA, accessibility-first hierarchy with increased contrast, standardized typography for improved legibility, and a reframed design language that built trust with healthcare professionals and members.",
+    //   complexity: [
+    //     "Limited color palette and typeface choices creating legibility issues",
+    //     "Design language prioritizing brand expression over user needs",
+    //     "Multiple product surfaces (member-facing apps, clinical dashboards) requiring flexible systems",
+    //     "No existing documentation for dietitian workflows; zero-to-launch for new tools",
+    //   ],
+    //   approach: [
+    //     {
+    //       title: "Brand Refresh",
+    //       description:
+    //         "Expanded the color palette with semantic colors for success, warning, error, and informational states—all meeting WCAG AA. Shifted to accessibility-first hierarchy with increased contrast. Standardized typography for body copy and interface text. Refreshed Ovi mascot with a modular 'Ovi Factory' system for scalable, contextual expressions and poses.",
+    //     },
+    //     {
+    //       title: "Design Systems (Ambrosia DLS)",
+    //       description:
+    //         "Built a foundational library of tokens, components, and patterns for consistency across all Foodsmart products. Created Product Design Component Library for clinician and admin-facing workflows (data tables, charting, scheduling). Built Member Design Component Library optimized for responsive UI, multilingual content, and WCAG AA compliance.",
+    //     },
+    //     {
+    //       title: "Design Process",
+    //       description:
+    //         "From zero to launch for dietitian tools: discovery and definition via interviews and competitor audits, centralized Confluence for research and personas, lightweight user testing protocols (FigJam templates, RD manager partnerships), and a single-pane-of-glass dietitian dashboard consolidating scheduling, member management, documentation, and communication.",
+    //     },
+    //     {
+    //       title: "DesignOps Blitz",
+    //       description:
+    //         "Defined team culture with onboarding deck, central Confluence structure, and clear roles and skill expectations. Fostered curiosity through monthly Lunch & Learn sessions (Lean UX, rapid user testing, AI-assisted design). Built collaboration rituals: weekly critique templates, async design retros, Figma/Confluence playbooks. Created File Setup Wizard Figma plugin for consistent project structure.",
+    //     },
+    //   ],
+    //   visuals: [
+    //     {
+    //       image: "/images/case-studies/foodsmart-people-first-design-practice.png",
+    //       title: "Color System Reference",
+    //       description:
+    //         "New semantic color system with accessibility-first approach",
+    //     },
+    //     {
+    //       image: "/images/case-studies/foodsmart-people-first-design-practice.png",
+    //       title: "Ovi mascot system",
+    //       description:
+    //         "Ovi mascot system with modular expressions and poses. Ovi Factory demonstration: https://www.youtube.com/embed/cgSsckMPsaU",
+    //     },
+    //     {
+    //       image: "/images/case-studies/foodsmart-people-first-design-practice.png",
+    //       title: "Ambrosia DLS architecture",
+    //       description:
+    //         "Design system showing tokens, components, and patterns",
+    //     },
+    //     {
+    //       image: "/images/case-studies/foodsmart-people-first-design-practice.png",
+    //       title: "Dietitian dashboard",
+    //       description:
+    //         "Single pane of glass consolidating scheduling, member management, and documentation",
+    //     },
+    //   ],
+    //   outcomes: [
+    //     {
+    //       title: "+43 NPS Point Increase",
+    //       description:
+    //         "Measured over 6 months post-launch.",
+    //     },
+    //     {
+    //       title: "Workflows > UI Refresh",
+    //       description:
+    //         "Solved actual pain points, not just aesthetics.",
+    //     },
+    //     {
+    //       title: "Trust Reduced Friction",
+    //       description:
+    //         "Improved confidence and efficiency in care delivery.",
+    //     },
+    //   ],
+    //   whatMatteredMost:
+    //     "The hardest part wasn't the design work—it was the organizational change. Getting teams to trust a shared system required patience, clear communication, and a willingness to iterate based on real feedback. What mattered most was treating the system as a service, not a mandate. We built trust by solving real problems—workflows, accessibility, and clarity—not by imposing process.",
+    //   lessons: [
+    //     "Consistency is an operational advantage, not just an aesthetic one.",
+    //     "A design system only works when documentation, implementation, and collaboration all evolve together.",
+    //     "Operational tools deserve the same design rigor as user-facing consumer products.",
+    //   ],
+    // },
   ],
 
   proofPages: [
     {
       slug: "design-systems",
-      title: "Design systems work",
+      title: "Design Systems",
       description:
-        "Token-based design systems, component libraries, and cross-platform coherence. Building systems that improve design-to-dev velocity and visual consistency.",
-      items: [
-        "Token-based design systems with components, documentation, and governance",
-        "Cross-platform consistency across web and mobile",
-        "Contribution models that scale without slowing teams down",
+        "Design systems are agreements about how teams work, decide, and scale. Token-based foundations, component libraries, and cross-platform coherence.",
+      intro: "Design systems are never just component libraries. They are agreements about how teams work, decide, and scale.",
+      framing:
+        "At Foodsmart, I led the creation of Ambrosia, a design system built from the ground up to support multiple product surfaces, evolving product priorities, and a growing design team. The goal was not to create a perfect library. It was to create a system teams could actually use, extend, and trust. The work included defining shared foundations, introducing reusable components, improving documentation, and helping design and engineering align around practical decisions rather than abstract idealism.",
+      sections: [
+        {
+          title: "Building from Zero",
+          content:
+            "There was no established system when this work began. Patterns existed in isolated places, but there was no shared language or reliable source of truth. Ambrosia introduced:",
+          items: [
+            "foundational tokens for spacing, color, typography, and interaction",
+            "reusable components across product contexts",
+            "clearer naming conventions",
+            "documentation that explained intent, not just appearance",
+          ],
+        },
+        {
+          title: "More Than One Library",
+          content:
+            "The system evolved into distinct layers: Design Language System (DLS) for foundational principles, Product library for internal platform workflows, and Member library for customer-facing experiences. This allowed shared consistency while respecting different product needs.",
+        },
+        {
+          title: "What Scaling Actually Required",
+          content:
+            "The hardest part of design systems is rarely drawing components. It is:",
+          items: [
+            "deciding where consistency matters most",
+            "knowing when not to standardize",
+            "documenting decisions before teams forget why they were made",
+            "helping engineers adopt patterns without slowing delivery",
+          ],
+        },
       ],
+      principles: [
+        "Consistency over perfection",
+        "Build for adoption",
+        "Document relentlessly",
+        "Systems are social before they are technical",
+      ],
+      callout:
+        "Earlier in my career, I also built Nucleus, another system effort under different constraints. Together, those experiences reinforced the same lesson: systems succeed when they reduce friction, not when they chase elegance for its own sake.",
+      imagePlaceholder: "/images/design-system.webp",
+      relatedCaseStudies: ["ambrosia-design-system"],
     },
     {
-      slug: "design-operations",
-      title: "Product design & DesignOps",
+      slug: "designops",
+      title: "DesignOps",
       description:
-        "Workflow UX in complex domains, design operations, and product design leadership. End-to-end ownership from discovery to delivery.",
-      items: [
-        "Workflow UX in complex and regulated domains",
-        "Critiques, handoffs, and quality loops that improve delivery",
-        "AI-assisted prototyping and documentation, used responsibly",
+        "Good process should make design easier to trust, not heavier to survive. Critique habits, documentation expectations, and team rhythms that reduce friction.",
+      intro: "Good process should make design easier to trust, not heavier to survive.",
+      framing:
+        "Much of my leadership work has involved quietly building the operating systems around design: critique habits, documentation expectations, handoff clarity, and team rhythms that help work move with less confusion. DesignOps, for me, has never meant adding ceremony. It means reducing avoidable friction.",
+      sections: [
+        {
+          title: "Establishing Operating Rhythm",
+          content:
+            "At Foodsmart, this included introducing:",
+          items: [
+            "more structured critique conversations",
+            "clearer expectations for design artifacts",
+            "stronger visibility into work in progress",
+            "more intentional review points before engineering handoff",
+          ],
+        },
+        {
+          title: "Making Design Visible",
+          content:
+            "One recurring problem in small teams is that important design thinking disappears into conversations. I pushed for systems where decisions could be revisited:",
+          items: [
+            "clearer rationale in files",
+            "documentation of tradeoffs",
+            "shared references for patterns and decisions",
+          ],
+        },
+        {
+          title: "Supporting Designers Without Bureaucracy",
+          content:
+            "Small teams do not need heavy frameworks. They need:",
+          items: [
+            "predictable habits",
+            "useful templates",
+            "enough structure to reduce rework",
+          ],
+        },
+        {
+          title: "Learning as Team Infrastructure",
+          content:
+            "I also introduced recurring internal learning moments, including a Lunch & Learn series, to strengthen shared vocabulary and sharpen design thinking across the team.",
+        },
       ],
+      principles: [
+        "Clarity over ceremony",
+        "Process should earn its existence",
+        "Documentation is leadership",
+        "Healthy teams need lightweight structure",
+      ],
+      callout:
+        "The goal was always the same: make good design easier to produce consistently without creating systems that collapse under their own weight.",
+      imagePlaceholder: null,
+      relatedCaseStudies: ["ambrosia-design-system"],
+    },
+    {
+      slug: "product-delivery",
+      title: "Product Thinking",
+      description:
+        "What improves outcomes most often is workflow clarity, not visual polish. Lean-first approach, iteration over assumption, and product judgment.",
+      intro: "What improves outcomes most often is workflow clarity, not visual polish.",
+      framing:
+        "Across projects, my strongest product work has usually started by identifying where users were blocked, uncertain, or forced into unnecessary work. That often meant resisting the urge to over-design early.",
+      sections: [
+        {
+          title: "Lean First",
+          content:
+            "I tend to begin with the smallest version that reveals whether the idea is useful. At Foodsmart, early internal tools often started as intentionally simple interfaces designed to answer one question: What information do users need right now to act confidently?",
+        },
+        {
+          title: "Iteration Over Assumption",
+          content:
+            "The Foodsmart benefit ledger work is a strong example. The first version introduced basic visibility. Feedback quickly revealed missing needs:",
+          items: [
+            "status clarity",
+            "expiration visibility",
+            "filtering for daily workflow",
+          ],
+          contentAfter: "The design evolved from there.",
+        },
+        {
+          title: "Product Judgment",
+          content:
+            "Not every useful improvement needs large scope. Sometimes the highest-value work is:",
+          items: [
+            "exposing hidden system state",
+            "improving confidence",
+            "reducing support dependency",
+          ],
+        },
+      ],
+      principles: [
+        "Ship to learn",
+        "Solve for confidence",
+        "Reduce invisible friction",
+        "Small changes can shift trust dramatically",
+      ],
+      callout:
+        "The most valuable design decisions are often the ones users barely notice because the work simply becomes easier.",
+      imagePlaceholder: "/images/food-benefits.webp",
+      relatedCaseStudies: ["food-benefit-ledger", "connecting-platforms"],
+    },
+    {
+      slug: "technical-fluency",
+      title: "Technical Fluency",
+      description:
+        "I design better when I understand how things are actually built. Prototyping, shared language with engineering, and implementation-aware design.",
+      intro: "I design better when I understand how things are actually built.",
+      framing:
+        "I am not a full-time engineer, but technical fluency has consistently improved my design work, especially in systems-heavy environments. It changes conversations from abstract preference to practical decision-making.",
+      sections: [
+        {
+          title: "Prototyping to Think",
+          content:
+            "For CI Security's MDR dashboard, I built a functional prototype using:",
+          items: [
+            "HTML",
+            "JavaScript",
+            "D3",
+            "scrubbed real-world data",
+          ],
+          contentAfter:
+            "The goal was not visual polish. It was testing whether hierarchy and interpretation worked under realistic conditions.",
+        },
+        {
+          title: "Better Handoff Through Shared Language",
+          content:
+            "Technical understanding improves:",
+          items: [
+            "feasibility conversations",
+            "component thinking",
+            "implementation quality",
+            "design system adoption",
+          ],
+        },
+        {
+          title: "Current Practice",
+          content:
+            "My independent product work has deepened this further through hands-on work with:",
+          items: [
+            "React",
+            "Supabase",
+            "design tokens",
+            "front-end architecture",
+            "deployment pipelines",
+          ],
+        },
+      ],
+      principles: [
+        "Constraints improve design",
+        "Shared vocabulary builds trust",
+        "Prototypes answer different questions than mockups",
+      ],
+      callout:
+        "Technical fluency does not replace design judgment. It strengthens it.",
+      imagePlaceholder: "/images/cisecurity-prototype.avif",
+      relatedCaseStudies: ["designing-trust-security-system"],
     },
   ],
 
@@ -875,3 +1076,5 @@ export function getFeaturedWriting() {
 export function getProofPageBySlug(slug: string) {
   return site.proofPages.find((p) => p.slug === slug);
 }
+
+export type ProofPage = (typeof site.proofPages)[number];

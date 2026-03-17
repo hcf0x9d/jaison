@@ -15,7 +15,7 @@ export default function PageIntro({
 }: PageIntroProps) {
   return (
     <section className={`mb-16 max-w-3xl ${className}`}>
-      <Body size="small" weight="regular" className="mb-4 text-[var(--text-tertiary)]">
+      <Body size="small" weight="regular" className="pt-8 mb-4 text-[var(--text-tertiary)]">
         {eyebrow}
       </Body>
       <Heading size="2xl" weight="heavy" className="mb-4 text-[var(--foreground)]">

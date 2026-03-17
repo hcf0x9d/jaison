@@ -4,10 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import PageShell from "@/components/PageShell";
 import BackLink from "@/components/BackLink";
-import LinkArrow from "@/components/LinkArrow";
 import Chip from "@/components/Chip";
 import { Heading, Body } from "@/components/Typography";
 import { ArrowRight } from "@/components/icons";
+import Blockquote from "@/components/Blockquote";
 
 type CaseStudy = (typeof import("@/lib/site").site.caseStudies)[number];
 
@@ -26,7 +26,7 @@ export default function CaseStudyClient({
   caseStudy: CaseStudy;
   nextCaseStudy: (typeof import("@/lib/site").site.caseStudies)[number] | null;
 }) {
-  const challenge = "challenge" in caseStudy ? caseStudy.challenge : caseStudy.problem;
+  const challenge = "challenge" in caseStudy ? caseStudy.challenge : (caseStudy as { problem?: string }).problem ?? null;
   const challengeDetail = "challengeDetail" in caseStudy ? caseStudy.challengeDetail : null;
   const challengeQuote = "challengeQuote" in caseStudy ? caseStudy.challengeQuote : null;
   const complexity = "complexity" in caseStudy ? caseStudy.complexity : null;
@@ -51,11 +51,11 @@ export default function CaseStudyClient({
   return (
     <PageShell contentWidth="full" className="pb-0">
       <div className="max-w-[996px] mx-auto">
-        <BackLink href="/" className="mb-8">
+        <BackLink href="/" className="mt-8">
           Back to home
         </BackLink>
 
-        <p className="section-label mb-4">Case Study</p>
+        {/*<p className="section-label mb-4">Case Study</p>*/}
 
         <Heading size="2xl" weight="heavy" className="mb-6 text-[var(--foreground)]">
           {caseStudy.title}
@@ -95,7 +95,7 @@ export default function CaseStudyClient({
             {/* The Challenge */}
             {(challenge || challengeDetail) && (
               <section className="py-12 px-6 -mx-6 sm:mx-0 sm:px-0 rounded-lg bg-[var(--surface-soft)] mb-16">
-                <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 lg:gap-12">
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 lg:gap-12 items-start">
                   <div className="space-y-6">
                     <Heading size="m" weight="heavy" className="text-[var(--foreground)]">
                       The Challenge
@@ -176,7 +176,7 @@ export default function CaseStudyClient({
               <section className="space-y-16 mb-16">
                 {visuals.map((v, i) => (
                   <div key={i} className="space-y-6">
-                    <div className="overflow-hidden rounded-lg border border-[var(--divider)] bg-[var(--surface-neutral)]">
+                    <div className="overflow-hidden rounded-lg border border-[var(--divider)] bg-[var(--surface-neutral)] max-h-[560px]">
                       <Image
                         src={v.image}
                         alt={v.title}
@@ -200,7 +200,7 @@ export default function CaseStudyClient({
 
             {/* Outcomes */}
             {outcomes.length > 0 && (
-              <section className="py-12 px-6 -mx-6 sm:mx-0 sm:px-0 rounded-lg bg-[var(--surface-soft)] mb-16">
+              <section className="py-12 px-6 -mx-6 sm:mx-0 sm:px-0 rounded-lg mb-16">
                 <Heading size="m" weight="heavy" className="mb-12 text-[var(--foreground)]">
                   Outcomes
                 </Heading>
@@ -235,11 +235,11 @@ export default function CaseStudyClient({
 
             {/* What mattered most */}
             {whatMatteredMost && (
-              <section className="py-32 px-8 -mx-4 sm:mx-0 sm:px-0 rounded-lg bg-gradient-to-b from-[var(--background)] to-[var(--surface-soft)] mb-16">
-                <Heading size="m" weight="heavy" className="mb-8 text-center text-[var(--foreground)]">
+              <section className="py-32 px-8 -mx-4 sm:mx-0 sm:px-0 rounded-lg mb-16">
+                <Heading size="m" weight="heavy" className="mb-8 text-[var(--foreground)]">
                   What mattered most
                 </Heading>
-                <Body size="large" weight="regular" className="text-center text-[var(--text-muted)] max-w-[896px] mx-auto">
+                <Body size="large" weight="regular" className="text-[var(--text-muted)] mx-auto">
                   {whatMatteredMost}
                 </Body>
               </section>
@@ -312,9 +312,11 @@ export default function CaseStudyClient({
           </>
         )}
 
-        {caseStudy.externalUrl && (
+        {"quote" in caseStudy && caseStudy.quote && (
           <div className="mb-16">
-            <LinkArrow href={caseStudy.externalUrl}>View live project</LinkArrow>
+            <Blockquote quote={caseStudy.quote.text} attribution={caseStudy.quote.cite} />
+            {/*<Blockquote size="baseline" weight="regular" className="text-[var(--foreground)]">*/}
+            {/*</Blockquote>*/}
           </div>
         )}
 

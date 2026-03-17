@@ -5,7 +5,17 @@ import MobileNav from "./MobileNav";
 import { ButtonLink } from "./Button";
 import TextLink from "./TextLink";
 
-export default function Navigation() {
+export type NavigationVariant = "light" | "dark";
+
+export interface NavigationProps {
+  /** Light = dark text/logo on light background. Dark = light text/logo on dark background. */
+  variant?: NavigationVariant;
+}
+
+export default function Navigation({ variant = "dark" }: NavigationProps) {
+  const linkVariant = variant === "light" ? "muted" : "reversed";
+  const logoVariant = variant === "light" ? "light" : "dark";
+
   return (
     <header className="absolute border-b border-[var(--border-subtle)] bg-transparent z-10 w-full">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8 lg:px-12">
@@ -13,7 +23,7 @@ export default function Navigation() {
           href="/"
           className="focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 rounded"
         >
-          <Logo variant="dark" />
+          <Logo variant={logoVariant} />
         </Link>
         {/* Desktop nav */}
         <div className="hidden items-center gap-8 lg:flex">
@@ -21,7 +31,7 @@ export default function Navigation() {
             <TextLink
               key={item.href}
               href={item.href}
-              variant="reversed"
+              variant={linkVariant}
               className="text-sm font-medium"
             >
               {item.label}
@@ -38,7 +48,7 @@ export default function Navigation() {
           )}
         </div>
         {/* Mobile nav */}
-        <MobileNav />
+        <MobileNav variant={variant} />
       </nav>
     </header>
   );

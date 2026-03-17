@@ -4,8 +4,13 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { ButtonLink } from "./Button";
+import type { NavigationVariant } from "./Navigation";
 
-export default function MobileNav() {
+export interface MobileNavProps {
+  variant?: NavigationVariant;
+}
+
+export default function MobileNav({ variant = "dark" }: MobileNavProps) {
   const [open, setOpen] = useState(false);
 
   // Close on escape key
@@ -28,7 +33,11 @@ export default function MobileNav() {
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-md text-[var(--foreground)] hover:bg-[var(--surface-soft)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2"
+        className={`flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-md hover:bg-[var(--surface-soft)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 ${
+          variant === "light"
+            ? "text-[var(--foreground)]"
+            : "text-[var(--text-reversed)]"
+        }`}
         aria-expanded={open}
         aria-controls="mobile-nav"
         aria-label={open ? "Close menu" : "Open menu"}

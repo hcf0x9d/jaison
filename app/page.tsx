@@ -10,6 +10,7 @@ import LinkArrow, { LinkArrowDisplay } from "@/components/LinkArrow";
 import Chip from "@/components/Chip";
 import TextLink from "@/components/TextLink";
 import heroImage from "@/components/hero.webp"
+import Logo from "@/components/Logo";
 
 export default function HomePage() {
   const { home } = site;
@@ -127,7 +128,7 @@ export default function HomePage() {
                       </LinkArrowDisplay>
                     </div>
                     {/* Image — right on desktop */}
-                    <div className="relative order-first overflow-hidden rounded-lg bg-[#e8e8e4] md:order-last">
+                    <div className="relative order-first overflow-hidden rounded-lg bg-[#e8e8e4] md:order-last shadow-xl">
                       {dominantWork.image ? (
                         <div className="aspect-[4/3] w-full md:aspect-[16/9]">
                           <Image
@@ -154,7 +155,7 @@ export default function HomePage() {
                       href={caseStudy.href}
                       className="group w-full"
                     >
-                      <div className="mb-4 aspect-[4/3] w-full overflow-hidden rounded-lg bg-gradient-to-br from-[var(--accent)]/10 to-[var(--text-secondary)]/5">
+                      <div className="mb-4 aspect-[4/3] w-full overflow-hidden rounded-lg bg-gradient-to-br from-[var(--accent)]/10 to-[var(--text-secondary)]/5 shadow-xl">
                         {caseStudy.image ? (
                           <div className="h-full w-full">
                             <Image
@@ -189,11 +190,11 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="mt-14">
-                <LinkArrow href="/case">
-                  View all case studies
-                </LinkArrow>
-              </div>
+              {/*<div className="mt-14">*/}
+              {/*  <LinkArrow href="/case">*/}
+              {/*    View all case studies*/}
+              {/*  </LinkArrow>*/}
+              {/*</div>*/}
             </div>
           </section>
         )}
@@ -268,10 +269,14 @@ export default function HomePage() {
                 </LinkArrow>
               </div>
               {/* K placeholder — Figma visual */}
-              <div className="flex items-center justify-center rounded-lg bg-gradient-to-br from-[var(--accent)]/20 to-[var(--accent)]/5 p-16 md:p-24">
-                <span className="text-[4rem] font-semibold leading-none text-[var(--accent)]/40 md:text-[5rem]">
-                  K
-                </span>
+              <div className="flex items-center justify-center rounded-lg">
+                  <Image
+                    src={home.featuredProducts[0].image}
+                    alt={home.featuredProducts[0].title}
+                    width={996}
+                    height={560}
+                    className="w-full object-cover"
+                  />
               </div>
             </div>
           </section>
@@ -279,9 +284,6 @@ export default function HomePage() {
 
         {/* Quote — Figma: accent bg, centered, decorative quote mark */}
         <section id="proof" className="relative overflow-hidden bg-[var(--accent)] px-4 py-16 md:px-8 md:py-24 lg:py-36">
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5" aria-hidden>
-            <span className="text-[12rem] font-black leading-none text-white select-none md:text-[20rem]">"</span>
-          </div>
           <div className="relative mx-auto max-w-3xl text-center">
             <p className="mb-8 text-xl font-medium leading-[1.4] text-white md:mb-10 md:text-2xl lg:text-[2.25rem]">
               &ldquo;{home.testimonial.quote}&rdquo;
@@ -327,8 +329,7 @@ export default function HomePage() {
         <footer className="border-t border-[var(--border-subtle)] px-4 py-8 md:px-8 md:py-10 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 md:flex-row">
             <div className="flex items-center gap-2">
-              <div className="h-6 w-1 bg-[var(--accent)]" aria-hidden />
-              <span className="font-semibold text-[var(--foreground)]">{site.meta.title}</span>
+              <Logo variant={'light'} />
             </div>
             <div className="flex flex-wrap items-center justify-center gap-6">
               <TextLink href={site.social.linkedin} variant="muted" external>
