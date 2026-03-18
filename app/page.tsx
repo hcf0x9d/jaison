@@ -23,10 +23,21 @@ export default function HomePage() {
     <main className="bg-[var(--background)]">
         {/* Hero — dark background, Figma layout */}
         <section className="relative min-h-[520px] overflow-hidden bg-[#2a2a2e] md:min-h-[640px]">
-          {/* Optional hero image overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#2a2a2e] via-[#2a2a2e]/95 to-transparent md:via-[#2a2a2e]/80 flex items-center" aria-hidden>
-            <Image src={heroImage} alt={"Hero Image"} />
+          {/* Hero image — full height on mobile, fills container on desktop */}
+          <div className="absolute inset-0">
+            <Image
+              src={heroImage}
+              alt=""
+              fill
+              className="object-cover object-right md:object-left"
+              sizes="100vw"
+            />
           </div>
+          {/* Uniform dark overlay for text readability — mobile only */}
+          <div
+            className="absolute inset-0 bg-[#1a1a1e]/80 md:bg-transparent"
+            aria-hidden
+          />
           <div className="relative mx-auto flex min-h-[520px] max-w-7xl flex-col justify-center px-4 pb-16 pt-24 md:min-h-[640px] md:px-8 md:pb-12 md:pt-28 lg:px-12">
             <div className="max-w-2xl">
               <h1 className="mb-6 flex flex-col text-[2.5rem] font-medium leading-[1.1] tracking-[-0.02em] text-[#fdfcfa] sm:text-[3.25rem] md:mb-8 md:text-[3.75rem] lg:text-[3.75rem] lg:leading-[4.125rem]">
@@ -74,7 +85,7 @@ export default function HomePage() {
         </section>
 
         {/* Pillars / Expertise — Figma: 2x2 grid, 48px padding */}
-        <section className="mx-auto max-w-7xl py-16 md:py-24 lg:py-28">
+        <section className="mx-auto max-w-7xl py-16 md:py-24 lg:py-28 px-4">
           <div className="section-label">Expertise</div>
           <h2 className="mb-12 text-[1.75rem] font-semibold leading-tight tracking-[-0.02em] text-[var(--foreground)] md:mb-16 md:text-[2.25rem]">
             Four areas of focus
@@ -148,7 +159,7 @@ export default function HomePage() {
                   </Link>
                 )}
 
-                <div className="flex gap-8 md:gap-10 lg:col-span-2">
+                <div className="grid grid-cols-1 gap-8 md:gap-10 lg:col-span-2 lg:grid-cols-3">
                   {secondaryWork.map((caseStudy) => (
                     <Link
                       key={caseStudy.slug}
