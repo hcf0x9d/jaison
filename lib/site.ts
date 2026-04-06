@@ -145,14 +145,14 @@ export const site = {
   caseStudies: [
     {
       slug: "ambrosia-design-system",
-      title: "Ambrosia Design System",
+      title: "Scaling Product Through a Design System",
       href: "/case/ambrosia-design-system",
       externalUrl: "https://foodsmartops.hcf0x9d.com/",
       image: "/images/design-system.webp",
       summary:
-        "A scalable multi-surface design system built from zero across product complexity.",
+        "Scaled a fragmented product experience into a cohesive, multi-platform system that improved delivery speed, consistency, and usability across teams.",
       shortSummary:
-        "Design system built from scratch for cross-platform consistency and velocity.",
+        "Transformed fragmented UX into a scalable product system used across platforms.",
       tags: ["Design Systems", "Healthcare", "Cross-platform", "DesignOps"],
       featured: true,
       role: "Lead Product Designer / Design Systems",
@@ -250,7 +250,7 @@ export const site = {
       externalUrl: "https://cisecurity.hcf0x9d.com/",
       image: "/images/cisecurity-prototype.avif",
       summary:
-        "A high-stakes dashboard experience for quiet, confident security monitoring.",
+        "Redesigned a high-stakes security dashboard to improve trust, reduce false urgency, and support confident decision-making.",
       shortSummary:
         "A high-stakes dashboard experience for quiet, confident security monitoring.",
       tags: ["Security", "Workflow UX"],
@@ -356,7 +356,7 @@ export const site = {
       externalUrl: "https://integrations.hcf0x9d.com/",
       image: "/images/3rd-party-integrations.webp",
       summary:
-        "Designing a faster, more intuitive way to map complex 3rd-party integrations. The Integration Platform was created to help users more efficiently manage third-party integrations within Medable's platform.",
+        "Simplified complex integration workflows into a modular system that reduced setup time and enabled non-technical users to configure connections.",
       shortSummary:
         "A modular integration system that reduced setup time from hours to minutes.",
       tags: ["Platform", "Enterprise", "Integrations", "Workflow UX"],
@@ -452,7 +452,7 @@ export const site = {
       externalUrl: "https://foodbenefits.hcf0x9d.com/",
       image: "/images/food-benefits.webp",
       summary:
-        "A benefit redemption ledger built for support, visibility, and trust.",
+        "Designed a visibility layer for benefit redemption that enabled real-time troubleshooting and reduced support dependency.",
       shortSummary:
         "A benefit redemption ledger built for support, visibility, and trust.",
       tags: ["Healthcare", "Support Tools"],
@@ -640,8 +640,8 @@ export const site = {
       slug: "design-systems",
       title: "Design Systems",
       description:
-        "Design systems are agreements about how teams work, decide, and scale. Token-based foundations, component libraries, and cross-platform coherence.",
-      intro: "Design systems are never just component libraries. They are agreements about how teams work, decide, and scale.",
+        "Design systems as a way to scale product quality, improve delivery speed, and create consistent user experiences across platforms.",
+      intro: "Design systems work best when they directly improve product quality and team velocity—not when they exist as standalone artifacts.",
       framing:
         "At Foodsmart, I led the creation of Ambrosia, a design system built from the ground up to support multiple product surfaces, evolving product priorities, and a growing design team. The goal was not to create a perfect library. It was to create a system teams could actually use, extend, and trust. The work included defining shared foundations, introducing reusable components, improving documentation, and helping design and engineering align around practical decisions rather than abstract idealism.",
       sections: [
@@ -688,8 +688,8 @@ export const site = {
       slug: "designops",
       title: "DesignOps",
       description:
-        "Good process should make design easier to trust, not heavier to survive. Critique habits, documentation expectations, and team rhythms that reduce friction.",
-      intro: "Good process should make design easier to trust, not heavier to survive.",
+        "Operational practices that improve how design actually gets shipped—without adding unnecessary process or overhead.",
+      intro: "Good process should make product design easier to execute, not heavier to manage.",
       framing:
         "Much of my leadership work has involved quietly building the operating systems around design: critique habits, documentation expectations, handoff clarity, and team rhythms that help work move with less confusion. DesignOps, for me, has never meant adding ceremony. It means reducing avoidable friction.",
       sections: [
@@ -743,9 +743,9 @@ export const site = {
     },
     {
       slug: "product-delivery",
-      title: "Product Thinking",
+      title: "Product Design & Delivery",
       description:
-        "What improves outcomes most often is workflow clarity, not visual polish. Lean-first approach, iteration over assumption, and product judgment.",
+        "Design decisions that improve real product outcomes—focused on workflow clarity, usability, and confidence in complex environments.",
       intro: "What improves outcomes most often is workflow clarity, not visual polish.",
       framing:
         "Across projects, my strongest product work has usually started by identifying where users were blocked, uncertain, or forced into unnecessary work. That often meant resisting the urge to over-design early.",
@@ -792,8 +792,8 @@ export const site = {
       slug: "technical-fluency",
       title: "Technical Fluency",
       description:
-        "I design better when I understand how things are actually built. Prototyping, shared language with engineering, and implementation-aware design.",
-      intro: "I design better when I understand how things are actually built.",
+        "Technical fluency that improves design quality, speeds up delivery, and strengthens collaboration with engineering.",
+      intro: "Understanding how products are built leads to better design decisions and faster execution.",
       framing:
         "I am not a full-time engineer, but technical fluency has consistently improved my design work, especially in systems-heavy environments. It changes conversations from abstract preference to practical decision-making.",
       sections: [
