@@ -240,24 +240,46 @@ export default function HomePage() {
       )}
 
         {/* Operating philosophy — Figma: centered, gradient bg */}
-        <section id="operate" className="bg-gradient-to-b from-[var(--background)] to-[var(--surface-soft)] px-4 py-16 md:px-8 md:py-24 lg:px-12 lg:py-28">
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="mb-6 text-[1.75rem] font-semibold leading-[1.2] tracking-[-0.02em] text-[var(--foreground)] sm:text-[2.25rem] md:mb-8 md:text-[2.75rem] lg:text-[3.45rem]">
-              {home.operatingPhilosophy.title}
-            </h2>
-            <p className="text-base leading-[1.6] text-[var(--text-secondary)] sm:text-lg md:text-xl lg:text-[1.5rem]">
-              {home.operatingPhilosophy.description}
-            </p>
+      <section id="operate"
+               className="bg-gradient-to-b from-[var(--background)] to-[var(--surface-soft)] px-4 py-16 md:px-8 md:py-24 lg:px-12 lg:py-28">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2
+            className="mb-6 text-[1.75rem] font-semibold leading-[1.2] tracking-[-0.02em] text-[var(--foreground)] sm:text-[2.25rem] md:mb-8 md:text-[2.75rem] lg:text-[3.45rem]">
+            {home.operatingPhilosophy.title}
+          </h2>
+          <p className="text-base leading-[1.6] text-[var(--text-secondary)] sm:text-lg md:text-xl lg:text-[1.5rem]">
+            {home.operatingPhilosophy.description}
+          </p>
+        </div>
+        <div className="mx-auto max-w-7xl text-center">
+          <h3
+            className="mb-12 text-[2.25rem] font-semibold leading-tight tracking-[-0.02em] text-[var(--foreground)] mt-16">
+            {home.howIWork.title}
+          </h3>
+          <div className="grid gap-12 md:grid-cols-2 md:gap-x-12 md:gap-y-16 lg:grid-cols-4 lg:gap-16 mt-8">
+            {home.howIWork.steps.map((step) => (
+              <div key={step.title} className="text-left">
+                <h3 className="mb-4 text-[1.25rem] font-black leading-tight text-[var(--foreground)]">
+                  {step.title}
+                </h3>
+                <p className="text-[0.9375rem] leading-[1.6] text-[var(--text-secondary)]">
+                  {step.description}
+                </p>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Writing — Figma: heading left, articles right on desktop */}
-        {featuredWriting.length > 0 && (
-          <section className="bg-[var(--surface-warm)] px-4 py-16 md:px-8 md:py-24 lg:px-12 lg:py-28">
-            <div className="mx-auto flex max-w-7xl flex-col gap-8 lg:flex-row lg:items-start lg:justify-between lg:gap-12">
-              <div className="shrink-0 lg:w-80">
-                <div className="section-label">Writing</div>
-                <h2 className="text-[1.75rem] font-semibold leading-tight tracking-[-0.02em] text-[var(--foreground)] md:text-[2.25rem]">
+      {/* Writing — Figma: heading left, articles right on desktop */}
+      {featuredWriting.length > 0 && (
+        <section className="bg-[var(--surface-warm)] px-4 py-16 md:px-8 md:py-24 lg:px-12 lg:py-28">
+          <div
+            className="mx-auto flex max-w-7xl flex-col gap-8 lg:flex-row lg:items-start lg:justify-between lg:gap-12">
+            <div className="shrink-0 lg:w-80">
+              <div className="section-label">Writing</div>
+              <h2
+                className="text-[1.75rem] font-semibold leading-tight tracking-[-0.02em] text-[var(--foreground)] md:text-[2.25rem]">
                   Recent articles
                 </h2>
               </div>

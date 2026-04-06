@@ -85,7 +85,27 @@ export const site = {
       description:
         "Design isn’t decoration. It’s product thinking made visible. The strongest work usually comes from clear decisions, strong constraints, and deep respect for the people who have to use the thing every day.",
     },
-
+    howIWork: {
+        title: "Practical, hands-on product design—focused on shipping, not just thinking.\n",
+        steps: [
+          {
+            title: "End-to-end ownership",
+            description: "I design from concept to production—not just handoff artifacts. The goal is a product that actually works in the real world.",
+          },
+          {
+            title: "Built with engineering",
+            description: "I collaborate directly with engineers to shape solutions that are both usable and buildable—closing the gap between intent and implementation.",
+          },
+          {
+            title: "Validated through use",
+            description: "I test ideas against real workflows and real behavior—not just assumptions or ideal scenarios.",
+          },
+          {
+            title: "Clarity over complexity",
+            description: "I focus on making complex systems understandable, fast, and reliable—so users can act with confidence.",
+          },
+        ],
+    },
     featuredWriting: [
       "ai-no-vibes",
       "scaling-design-systems",
@@ -121,7 +141,7 @@ export const site = {
         label: "View proof",
         href: "/proof",
       },
-    },
+    }
   },
 
   casePage: {
