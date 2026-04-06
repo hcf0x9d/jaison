@@ -2,7 +2,7 @@ export const site = {
   meta: {
     title: "Jason Fukura",
     description:
-      "Systems-first design. Human-centered outcomes. I help teams build clearer, more scalable digital products through design systems, workflow UX, and operational clarity.",
+      "Principal product designer focused on complex workflows, scalable systems, and shipped digital products across healthcare, SaaS, and platform environments.",
     url: "https://jason.fukura.design",
     email: "jason@fukura.design",
     location: "Greater Seattle Area",
@@ -25,50 +25,50 @@ export const site = {
 
   home: {
     hero: {
-      eyebrow: "Product Design · Design Systems · DesignOps",
-      titleLine1: "Systems-first design.",
-      titleLine2: "Human-centered outcomes.",
-      title: "Systems-first design. Human-centered outcomes.",
+      eyebrow: "Principal Product Designer · Complex Workflows · Design Systems",
+      titleLine1: "I design and ship",
+      titleLine2: "complex product experiences.",
+      title: "I design and ship complex product experiences.",
       description:
-        "I help teams create clearer, more scalable digital products through design systems, workflow UX, and operational clarity.",
+        "From messy workflows to production-ready systems, I turn complex products into experiences people can actually use.",
       supportingText:
-        "Over the past decade, I’ve built design systems from scratch, improved handoff and quality loops, and designed workflow-heavy products in complex environments. My work bridges strategy and execution—helping teams move faster without drifting into inconsistency.",
+        "Over the past decade, I’ve designed end-to-end experiences across healthcare, SaaS, security, and platform products. I’m especially strong in workflow-heavy environments where product clarity, systems thinking, and technical fluency make the difference between something that looks good and something that actually ships well.",
       primaryCta: {
         label: "View case studies",
         href: "/#work",
       },
       secondaryCta: {
-        label: "How I operate",
+        label: "How I work",
         href: "/#operate",
       },
     },
 
     proofStrip: [
-      "10+ years in product, UX, and systems work",
-      "Built major design systems from scratch",
-      "Deep experience in workflow-heavy product environments",
+      "10+ years designing and shipping digital products",
+      "Built design systems from scratch without losing product focus",
+      "Deep experience in complex, workflow-heavy environments",
     ],
 
     pillars: [
       {
-        title: "Design systems",
+        title: "End-to-end product design",
         description:
-          "Building cohesive, scalable component libraries that accelerate product velocity while maintaining consistency.",
+          "Designing products from concept through production, with a focus on clarity, usability, and real-world constraints.",
       },
       {
-        title: "Workflow UX",
+        title: "Complex workflow UX",
         description:
-          "Designing for complex, high-frequency tasks where efficiency and clarity directly impact user success.",
+          "Designing for high-frequency, high-context tasks where speed, confidence, and decision quality matter.",
       },
       {
-        title: "DesignOps",
+        title: "Design systems that support product",
         description:
-          "Establishing processes, tooling, and team structures that enable design organizations to scale effectively.",
+          "Building scalable systems, components, and patterns that help teams ship faster without fragmenting the experience.",
       },
       {
-        title: "Responsible AI",
+        title: "AI in real product environments",
         description:
-          "Embedding transparency, accountability, and human oversight into AI-powered product experiences.",
+          "Exploring practical, responsible uses of AI that improve outcomes without sacrificing usability, trust, or human judgment.",
       },
     ],
 
@@ -81,9 +81,9 @@ export const site = {
     ],
 
     operatingPhilosophy: {
-      title: "Clarity is an operating principle.",
+      title: "Clarity is how better products ship.",
       description:
-        "Design isn't decoration. It's decision-making made visible. The best systems emerge from clear thinking, rigorous constraints, and a deep respect for the people who will use them daily.",
+        "Design isn’t decoration. It’s product thinking made visible. The strongest work usually comes from clear decisions, strong constraints, and deep respect for the people who have to use the thing every day.",
     },
 
     featuredWriting: [
@@ -96,23 +96,23 @@ export const site = {
       {
         title: "Kyōfolio",
         description:
-          "An adaptive daily planning system that helps you organize tasks, routines, and priorities around changing energy—without turning productivity into punishment.",
+          "A product I designed and built end-to-end to help people plan around changing energy, shifting priorities, and real life instead of rigid productivity rules.",
         href: "https://www.kyofolio.com",
-        status: "Side project",
+        status: "Designed and built end-to-end",
         image: "/images/ipad-today.png",
       },
     ],
 
     testimonial: {
       quote:
-        "Jason cares deeply about his team, maintains a consistently high bar, and approaches problems with clear, logical thinking.",
-      attribution: "Senior Engineering Lead",
+        "Jason is an exceptionally talented UX professional. He brings disciplined thought and clarity to both problem analysis and solution iteration.",
+      attribution: "Senior Design Lead",
     },
 
     closingCta: {
-      title: "Building a system, scaling a product surface, or trying to reduce chaos tax?",
+      title: "Building a product, scaling a platform, or untangling a messy workflow?",
       description:
-        "Let's talk about how clarity, structure, and systems thinking can help.",
+        "Let’s talk about how strong product thinking, clear UX, and the right level of systems support can help.",
       primaryCta: {
         label: "Get in touch",
         href: "/contact",
@@ -127,9 +127,9 @@ export const site = {
   casePage: {
     intro: {
       eyebrow: "Selected Work",
-      title: "Case studies in systems, workflows, and scalable product thinking.",
+      title: "Case studies in product design, complex workflows, and systems that scale.",
       description:
-        "These projects span design systems, operational tooling, workflow-heavy UX, and product infrastructure. Different domains, same pattern: complex systems, high-stakes decisions, and teams that need better clarity between intention and implementation.",
+        "These projects span healthcare, security, platform tooling, and design systems. Different domains, same pattern: complex products, high-stakes decisions, and users who need clarity more than noise.",
     },
     filters: [
       "Design Systems",
@@ -849,36 +849,36 @@ export const site = {
   proofPage: {
     intro: {
       eyebrow: "Experience & Credibility",
-      title: "Proof that the systems thinking shows up in the work.",
+      title: "Proof that the product thinking shows up in the work.",
       description:
-        "I build design systems, workflows, and operational frameworks that make good design repeatable across products, platforms, and teams.",
+        "I design products, workflows, and systems that make complex experiences clearer, faster, and more reliable across teams and platforms.",
     },
 
     strengths: [
       {
-        title: "Systems",
+        title: "Product Design",
         items: [
-          "Token-based design systems with components, documentation, and governance",
-          "Cross-platform consistency across web and mobile",
-          "Contribution models that scale without slowing teams down",
+          "End-to-end product design across healthcare, SaaS, platform, and security environments",
+          "Workflow UX for complex, high-context tasks",
+          "Design decisions grounded in usability, implementation reality, and product outcomes",
         ],
       },
       {
-        title: "Design Operations",
+        title: "Systems & Delivery",
         items: [
-          "Workflow UX in complex and regulated domains",
-          "Critiques, handoffs, and quality loops that improve delivery",
-          "AI-assisted prototyping and documentation, used responsibly",
+          "Design systems with tokens, components, documentation, and governance",
+          "Cross-functional collaboration that improves design-to-development velocity",
+          "Front-end fluency that helps bridge design intent and shipped reality",
         ],
       },
     ],
 
     highlights: [
-      "Built design systems from scratch",
-      "Improved design-to-development velocity",
+      "Designed and shipped products across healthcare, platform, and security domains",
+      "Built design systems from scratch that improved consistency and delivery speed",
       "Created a partner portal that reduced marketing overhead by ~60%",
       "Redesigned a web experience and doubled qualified leads",
-      "Improved coherence across web and mobile product surfaces",
+      "Improved workflow clarity across web and mobile product surfaces",
     ],
 
     experience: {
@@ -970,12 +970,12 @@ export const site = {
     ],
 
     topSkills: [
+      "Product Design",
+      "Complex Workflow UX",
       "Design Systems",
-      "DesignOps",
-      "Workflow UX",
       "Cross-functional collaboration",
       "Front-end fluency",
-      "Responsible AI-assisted workflows",
+      "AI-assisted product workflows",
     ],
   },
 
@@ -1018,7 +1018,7 @@ export const site = {
       eyebrow: "Contact",
       title: "Let’s talk.",
       description:
-        "If you’re building a system, scaling a product surface, improving workflow UX, or trying to make quality more repeatable, I’d love to hear about it.",
+        "If you’re building a product, improving a complex workflow, or trying to bring more clarity and consistency to a growing platform, I’d love to hear about it.",
     },
     contactMethods: [
       {

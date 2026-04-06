@@ -209,11 +209,40 @@ export default function HomePage() {
             </div>
           </section>
         )}
+      {/* Products — Figma: two-column, Kyōfolio with K placeholder */}
+      {home.featuredProducts.length > 0 && (
+        <section className="bg-[var(--surface-warmer)] px-4 py-16 md:px-8 md:py-24 lg:px-12 lg:py-28">
+          <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-2 lg:gap-12 lg:items-center">
+            <div className="space-y-6">
+              <div className="section-label">Side project</div>
+              <h2 className="text-[2rem] font-semibold leading-tight tracking-[-0.02em] text-[var(--foreground)] md:text-[3rem]">
+                {home.featuredProducts[0].title}
+              </h2>
+              <p className="max-w-xl text-base leading-[1.6] text-[var(--text-secondary)] md:text-lg">
+                {home.featuredProducts[0].description}
+              </p>
+              <LinkArrow href={home.featuredProducts[0].href} className="text-base">
+                Visit Kyōfolio
+              </LinkArrow>
+            </div>
+            {/* K placeholder — Figma visual */}
+            <div className="flex items-center justify-center rounded-lg">
+              <Image
+                src={home.featuredProducts[0].image}
+                alt={home.featuredProducts[0].title}
+                width={996}
+                height={560}
+                className="w-full object-cover"
+              />
+            </div>
+          </div>
+        </section>
+      )}
 
         {/* Operating philosophy — Figma: centered, gradient bg */}
         <section id="operate" className="bg-gradient-to-b from-[var(--background)] to-[var(--surface-soft)] px-4 py-16 md:px-8 md:py-24 lg:px-12 lg:py-28">
           <div className="mx-auto max-w-4xl text-center">
-            <h2 className="mb-6 text-[1.75rem] font-semibold leading-[1.2] tracking-[-0.02em] text-[var(--foreground)] sm:text-[2.5rem] md:mb-8 md:text-[3rem] lg:text-[3.75rem]">
+            <h2 className="mb-6 text-[1.75rem] font-semibold leading-[1.2] tracking-[-0.02em] text-[var(--foreground)] sm:text-[2.25rem] md:mb-8 md:text-[2.75rem] lg:text-[3.45rem]">
               {home.operatingPhilosophy.title}
             </h2>
             <p className="text-base leading-[1.6] text-[var(--text-secondary)] sm:text-lg md:text-xl lg:text-[1.5rem]">
@@ -258,36 +287,6 @@ export default function HomePage() {
                     More on Medium
                   </LinkArrow>
                 </div>
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* Products — Figma: two-column, Kyōfolio with K placeholder */}
-        {home.featuredProducts.length > 0 && (
-          <section className="bg-[var(--surface-warmer)] px-4 py-16 md:px-8 md:py-24 lg:px-12 lg:py-28">
-            <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-2 lg:gap-12 lg:items-center">
-              <div className="space-y-6">
-                <div className="section-label">Side project</div>
-                <h2 className="text-[2rem] font-semibold leading-tight tracking-[-0.02em] text-[var(--foreground)] md:text-[3rem]">
-                  {home.featuredProducts[0].title}
-                </h2>
-                <p className="max-w-xl text-base leading-[1.6] text-[var(--text-secondary)] md:text-lg">
-                  {home.featuredProducts[0].description}
-                </p>
-                <LinkArrow href={home.featuredProducts[0].href} className="text-base">
-                  Visit Kyōfolio
-                </LinkArrow>
-              </div>
-              {/* K placeholder — Figma visual */}
-              <div className="flex items-center justify-center rounded-lg">
-                  <Image
-                    src={home.featuredProducts[0].image}
-                    alt={home.featuredProducts[0].title}
-                    width={996}
-                    height={560}
-                    className="w-full object-cover"
-                  />
               </div>
             </div>
           </section>
